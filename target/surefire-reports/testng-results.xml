@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="am.Inecobank Suite" duration-ms="106564" started-at="2020-01-13T21:14:00 AMT" finished-at="2020-01-13T21:15:47 AMT">
+    <groups>
+    </groups>
+    <test name="am.Inecobank Test" duration-ms="106564" started-at="2020-01-13T21:14:00 AMT" finished-at="2020-01-13T21:15:47 AMT">
+      <class name="am.inecobank.base.InecoBaseTest">
+        <test-method status="PASS" signature="prepareEnv()[pri:0, instance:am.inecobank.base.InecoBaseTest@36d4b5c]" name="prepareEnv" is-config="true" duration-ms="106246" started-at="2020-01-13T21:14:00 AMT" finished-at="2020-01-13T21:15:46 AMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareEnv -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:am.inecobank.base.InecoBaseTest@36d4b5c]" name="cleanup" is-config="true" duration-ms="1" started-at="2020-01-13T21:15:47 AMT" finished-at="2020-01-13T21:15:47 AMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- am.inecobank.base.InecoBaseTest -->
+    </test> <!-- am.Inecobank Test -->
+  </suite> <!-- am.Inecobank Suite -->
+</testng-results>
