@@ -1,2 +1,3 @@
 am\inecobank\pages\home\InecobankHomePage.class
 am\inecobank\pages\base\InecobankBasePageObject.class
+am\inecobank\pages\signin\SignInPage.class

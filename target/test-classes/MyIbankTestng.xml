@@ -3,7 +3,7 @@
 <suite name="am.Inecobank Suite" verbose="1">
 	<test name="am.Inecobank Test">
 		<classes>
-			<class name="am.inecobank.base.InecoBaseTest">
+			<class name="am.inecobank.signin.SignInPageTest">
 				<methods>
 				</methods>
 			</class>
