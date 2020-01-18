@@ -1,21 +1,27 @@
 package am.inecobank.signin;
 
-import org.testng.annotations.Test;
+import java.util.ArrayList;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import am.inecobank.base.InecoBaseTest;
-import am.inecobank.pages.home.InecobankHomePage;
+import am.inecobank.pages.home.InecobankGuestHomePage;
+import am.inecobank.pages.home.InecobankMemberHomePage;
 import am.inecobank.pages.signin.SignInPage;
 
 public class SignInPageTest extends InecoBaseTest {
 
 	@Test
-
-	public void signinFunctionalityTest() {
-		InecobankHomePage home = new InecobankHomePage(driver);
+	public void signinWithCorrectCredentialsTest() {
+		InecobankGuestHomePage home = new InecobankGuestHomePage(driver);
 		SignInPage signin = home.clickOnSignInbutton();
-		signin = signin.fillUsername("John");
-		signin = signin.fillPassword("12ert%RR");
-		signin = signin.clickLogin();
+		 ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+		 driver.switchTo().window(tabs2.get(1));
+		   
+		signin = signin.fillUsername(correctUsername);
+		signin = signin.fillPassword(correctPassword);
+		InecobankMemberHomePage memberHome = signin.clickLogin();
+		Assert.assertTrue(memberHome.verifyElementPresent(memberHome.TRANSACTION_BTN));
 
 	}
 }

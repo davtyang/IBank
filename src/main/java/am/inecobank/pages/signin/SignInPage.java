@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import am.inecobank.pages.base.InecobankBasePageObject;
+import am.inecobank.pages.home.InecobankMemberHomePage;
 
 public class SignInPage extends InecobankBasePageObject {
 	public SignInPage(WebDriver driver) {
@@ -23,22 +24,23 @@ public class SignInPage extends InecobankBasePageObject {
 	@FindBy(xpath = LOGIN_CLICK)
 	WebElement clickLoginbtn;
 
-	public final SignInPage fillUsername(String username) {
+	public SignInPage fillUsername(String username) {
 		waitForElementPresent(USERNAME_INPUT);
 		usernameInputField.sendKeys(username);
 		return new SignInPage(driver);
 	}
 
-	public final SignInPage fillPassword(String password) {
+	public SignInPage fillPassword(String password) {
 		waitForElementPresent(PASSWORD_INPUT);
-		usernameInputField.sendKeys(password);
+		passwordInputField.sendKeys(password);
 		return new SignInPage(driver);
 	}
-
-	public final SignInPage clickLogin() {
+	
+	
+	public InecobankMemberHomePage clickLogin() {
 		waitForElementPresent(LOGIN_CLICK);
 		clickLoginbtn.click();
-		return new SignInPage(driver);
+		return new InecobankMemberHomePage(driver);
 
 	}
 }
